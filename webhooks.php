@@ -24,7 +24,7 @@ if (!is_null($events['events'])) {
 			$intro_text = "หมายเลขยืนยันการลงทะเบียนของคุณ คือ ";			
 			$Line_UserId = $event['source']['userId'];
 			$apikey = mt_rand(100000, 999999);			
-			$register_text = " กดที่ลิงค์นี้เพื่อลงเบียนผู้ใช้งาน https://borrowmoney.herokuapp.com/index.php?line_user_id=".$Line_UserId."&apikey=".$apikey;
+			$register_text = " กดที่ลิงค์นี้เพื่อลงเบียนผู้ใช้งาน http://ellis.surat.psu.ac.th/Line-Messaging-API/staff_register.php?line_user_id=".$Line_UserId."&apikey=".$apikey;
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
