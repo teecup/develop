@@ -3,7 +3,8 @@
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
-$access_token = 'ahbj8DK/OxNGHqr9fwgt4pNzw2TNhNIBtmbvEBw0ILtArrE0S78BE+FVulEvtk3y62bz7QkbT+J0f5MJRlC6yMRv4IQyMyTRQLEBV8s+UI/sdJ5YiKkhLB/mmgU8JhoIByJcUoH06CYb3hUotv6BFwdB04t89/1O/w1cDnyilFU=';
+$access_token = '30Tf3e0wn3k7CE4NwIjAwjt7M8cMO8Rbs8pIWiY9jlD6WMdkvybkQIVaIK4FPe27Z5ZXuj57qOuS9TH40lFSP+Rl3hKV0MFOjpXoWhOcEFYdcVZylVeLU6Mw/ENeq2cKYN9CVUdxYX2FqXAZSpeZbwdB04t89/1O/w1cDnyilFU=
+';
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -23,7 +24,7 @@ if (!is_null($events['events'])) {
 			$intro_text = "หมายเลขยืนยันการลงทะเบียนของคุณ คือ ";			
 			$Line_UserId = $event['source']['userId'];
 			$apikey = mt_rand(100000, 999999);			
-			$register_text = " กดที่ลิงค์นี้เพื่อลงเบียนผู้ใช้งาน http://ellis.surat.psu.ac.th/Line-Messaging-API/staff_register.php?line_user_id=".$Line_UserId."&apikey=".$apikey;
+			$register_text = " กดที่ลิงค์นี้เพื่อลงเบียนผู้ใช้งาน https://borrowmoney.herokuapp.com/index.php?line_user_id=".$Line_UserId."&apikey=".$apikey;
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
