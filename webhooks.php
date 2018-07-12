@@ -23,7 +23,7 @@ if (!is_null($events['events'])) {
 			$intro_text = "หมายเลขยืนยันการลงทะเบียนของคุณ คือ ";			
 			$Line_UserId = $event['source']['userId'];
 			$apikey = mt_rand(100000, 999999);			
-			$register_text = " กดที่ลิงค์นี้เพื่อลงเบียนผู้ใช้งาน http://borrowmoney.surat.psu.ac.th/login/";
+			$register_text = " กดที่ลิงค์นี้เพื่อลงเบียนผู้ใช้งาน http://assetit.surat.psu.ac.th/line_message/index.php?regist_id='$Line_UserId'";
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
